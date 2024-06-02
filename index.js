@@ -87,17 +87,16 @@ function drawMenuList(){
     
         // Обновляем содержимое клонированного фрагмента
         coin_clone.querySelector("#title").textContent = coinData.USD.FROMSYMBOL;
-        coin_clone.querySelector("#price").textContent = coinData.USD.PRICE;
+        coin_clone.querySelector("#price").textContent = coinData.USD.PRICE + '$';
         coin_clone.querySelector("#logo").src = "https://www.cryptocompare.com" + coinData.USD.IMAGEURL;
     
         // Находим элемент li внутри фрагмента и задаем ему id
         let li_element = coin_clone.querySelector("li");
         const id_coin = "coin-" + coinData.USD.FROMSYMBOL;
         li_element.id = id_coin;
-    
+
         // Добавляем слушатель события на элемент li
         li_element.addEventListener('click', () => {
-            console.log(coinKey);
             selectCoin(coinData);
             drawCoin();
         });
