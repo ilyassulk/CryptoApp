@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <title>CryptoApp</title>
+</head>
+<body class="h-dvh w-dvw">
+
+<div id="menu" class="menu">
+    <ul class="">
+        
+    </ul>
+</div>
+
+<div class="absolute h-full w-full flex flex-col justify-end items-end p-5">
+    <div class="">
+        <input type="checkbox" id="interval_check_box" value="" class="hidden peer" required="">
+        <label for="interval_check_box" class="w-[100px] text-gray-500 p-1 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+        <div class="w-full text-lg font-semibold inline">RELOAD</div>
+        </label>
+    </div>
+</div>
+
+<div id="app" class="flex flex-col h-full">
+<header class="flex flex-row bg-black h-[36px] text-white justify-center items-center font-bold text-xl">
+<h1>CryptoApp</h1>
+<button id="menu_button" class="text-white absolute right-2 my-auto">Меню</button>
+</header>
+<main id="display-coin" class="flex-grow bg-white flex flex-col justify-center items-center w-full">
+<img class="rounded-full" id="logo" src="init-logo.jpeg" alt="coin logo" height="20%" width="20%">
+<h1 id="title" class="font-bold text-4xl">Notcoin</h1>
+<h2 id="price" class="text-xl">100000.0$</h2>
+
+</main>
+</div>
+<template id="template-menu-coin">
+    <li class="w-full transition-all duration-300 ease-out hover:bg-slate-800 cursor-pointer flex flex-row justify-start items-centermt-3 gap-2">
+        <img id="logo" src="init-logo.jpeg" height="50px" width="50px">
+        <div class="flex flex-col">
+            <h2 id="title">loading...</h2>
+            <h3 id="price">loading...</h3>
+        </div>
+    </li>
+</template>
+</body>
+<script src="index.js"></script>
+</html>

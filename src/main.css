@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#logo-coin{
+    max-width: 400px;
+    max-height: 400px;
+    height: 100vmin;
+    width: 100vmin;
+}
+
+.menu{
+    position: absolute;
+    color: white;
+    background-color: black;
+    transition-property: left;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    height: 100dvh;
+    width: 300px;
+    left: -300px;
+}
+
+.menu-open{
+    left: 0;
+}
